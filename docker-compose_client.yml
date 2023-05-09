@@ -1,0 +1,45 @@
+version: "3"
+services:
+    db:
+        image: postgres:latest
+        container_name: postgres
+        restart: always
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: "postgres"
+            POSTGRES_PASSWORD: "password"
+        volumes:
+            - ./data:/var/lib/postgresql/data
+
+    pgadmin:
+        container_name: pgadmin
+        image: dpage/pgadmin4
+        restart: always
+        ports:
+            - 8088:80
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=info@designxplay.com
+            - PGADMIN_DEFAULT_PASSWORD=dxp@2020!
+
+    server:
+        build: 
+            context: ./server
+        container_name: quizschool-server
+        restart: always
+        ports:
+            - "4000:4000"
+        volumes:
+            - /app/node_modules
+            - ./server:/app
+        
+    client:
+        build:
+            context: ./client
+        container_name: quizschool-client
+        ports:
+            - "3000:3000"
+        volumes:
+            - /app/node_modules
+            - ./client:/app
+        stdin_open: true
