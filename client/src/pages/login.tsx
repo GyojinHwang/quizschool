@@ -42,7 +42,7 @@ const Login = () => {
 
                     <div className=" flex flex-col items-center justify-end w-80 h-12">
 
-                        <p className="w-full h-5 font-bold">아이디</p>
+                        <p className="w-full h-5 font-bold">아이ddd디</p>
                         <div className="w-full h-8">
                             <input className=" mt-2 p-4 flex-1 h-full w-full bg-white border rounded border-gray-300"
                                 type="text"

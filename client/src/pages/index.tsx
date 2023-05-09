@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <img className="absolute left-0 top-0 rounded-2xl" style={{width: 456, height: 317.86,}} src="game1.png"/>
     </div>
     <p className="absolute text-3xl font-bold" style={{width: 516, height: 40.94, left: 104, top: 115,}}>쉬는시간보다 흥미로운 수업시간!</p>
-    <p className="absolute text-2xl font-bold"  style={{width: 516, height: 40.94, left: 104, top: 530,}}>지금 바ddddh로 시작해 보세요.</p>
+    <p className="absolute text-2xl font-bold"  style={{width: 516, height: 40.94, left: 104, top: 530,}}>지금 바로 시작해 보세요.</p>
     <p className="absolute text-6xl font-extrabold" style={{width: 505, height: 268, left: 104, top: 185.79,}}>간단하게 <br/><a className=" text-amber-500">퀴즈를 세팅</a>하고<br/>즐기세요!</p>
     <div className="w-40 h-14 absolute" style={{left: 104, top: 578.26,}}>
         <div className="flex items-center justify-center flex-1 h-full pt-3 pb-4 bg-white border font-bold rounded-lg border-gray-900">
