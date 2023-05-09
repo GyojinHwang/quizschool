@@ -1,21 +1,6 @@
-<<<<<<< HEAD
   import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import { useAuthState } from '../context/auth'
-=======
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import useSWR from 'swr';
-import { Post, Sub } from '../types'
-import axios from 'axios'
-import { useAuthState } from '../context/auth'
-import useSWRInfinite from 'swr/infinite';
-import PostCard from '../components/PostCard'
-import { useEffect, useState } from 'react'
->>>>>>> 63a9535 (initial)
 
 const webgl = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -33,7 +18,6 @@ const webgl = () => {
 }
 
 export default webgl
-<<<<<<< HEAD
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   try {
@@ -53,5 +37,3 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
       return { props: {} };
   }
 }
-=======
->>>>>>> 63a9535 (initial)

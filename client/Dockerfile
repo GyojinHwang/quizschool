@@ -11,12 +11,6 @@ COPY ./ ./
 
 ENV NODE_ENV production
 
-<<<<<<< HEAD
 RUN npm run build:production
 
 CMD ["npm", "run", "start:production"]
-=======
-RUN npm run build
-
-CMD ["npm", "run", "start"]
->>>>>>> 63a9535 (initial)

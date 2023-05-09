@@ -6,7 +6,6 @@
     "axe/text-alternatives": [
       "default",
       {
-<<<<<<< HEAD
         "object-alt": "off",
         "image-alt": "off"
       }
@@ -20,10 +19,5 @@
       }
     ],
     "axe/parsing": "off"
-=======
-        "object-alt": "off"
-      }
-    ]
->>>>>>> 63a9535 (initial)
   }
 }

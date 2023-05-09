@@ -7,18 +7,14 @@ import NavBar from '../components/NavBar';
 import { SWRConfig } from 'swr';
 import axios from 'axios';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
 import { useState } from 'react';
-=======
->>>>>>> 63a9535 (initial)
 
 function MyApp({ Component, pageProps }: AppProps) {
   Axios.defaults.baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL + "/api";
   Axios.defaults.withCredentials = true;
 
   const { pathname } = useRouter();
-<<<<<<< HEAD
   // const authRoutes = ["/register", "/login", "/saves/loadSample/sample1", "/saves/loadSample/sample2", "/saves/loadSample/sample3", "/saves/loadSample/sample4", "/saves/loadSample/sample5", "/saves/loadSample/sample6", "/saves/loadSample/sample7", "/saves/loadSample/sample8", "/saves/loadSample/sample9", "/saves/loadSample/sample10"];
 
   const authRoutes = [
@@ -37,9 +33,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     "/saves/loadQuestions/*"
   ];
 
-=======
-  const authRoutes = ["/register", "/login"];
->>>>>>> 63a9535 (initial)
   const authRoute = authRoutes.includes(pathname);
 
   const fetcher = async (url: string) => {
@@ -60,7 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         fetcher
       }}
     >
-<<<<<<< HEAD
 
       <AuthProvider>
 
@@ -71,13 +63,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         </div>
 
-=======
-      <AuthProvider>
-        {!authRoute && <NavBar />}
-        <div className={authRoute ? "" : "pt-12 bg-gray-200 min-h-screen"}>
-          <Component {...pageProps} />
-        </div>
->>>>>>> 63a9535 (initial)
       </AuthProvider>
     </SWRConfig>
   </>

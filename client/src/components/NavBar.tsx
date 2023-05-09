@@ -5,14 +5,9 @@ import { FaSearch } from "react-icons/fa";
 import { useAuthDispatch, useAuthState } from "../context/auth"
 
 const NavBar: React.FC = () => {
-<<<<<<< HEAD
     const { loading, authenticated, user } = useAuthState();
     const dispatch = useAuthDispatch();
     const myname = user?.user_no;
-=======
-    const { loading, authenticated } = useAuthState();
-    const dispatch = useAuthDispatch();
->>>>>>> 63a9535 (initial)
 
     const handleLogout = () => {
         axios.post("/auth/logout")
@@ -26,7 +21,6 @@ const NavBar: React.FC = () => {
     }
 
     return (
-<<<<<<< HEAD
         <div className="border-b border-slate-300" style={{display: 'flex',  justifyContent:'center', alignItems:'center', }}>
         <div className="relative   bg-white" style={{width: 1440, height: 100, }}>
             <div className="inline-flex space-x-14 items-center justify-end absolute" style={{width: 633, height: 20, left: 291, top: 41, }}>
@@ -65,78 +59,6 @@ const NavBar: React.FC = () => {
             </div>
         </div>
         </div>
-=======
-        <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between px-5 bg-white h-13">
-            <span className="text-2xl font-semibold text-gray-400">
-                <Link href="/">
-                    <a>
-                    <Image
-                        src="/reddit-name-logo.png"
-                        alt="logo"
-                        width={150}
-                        height={45}
-                    >
-                    </Image>
-                    </a>
-                </Link>
-            </span>
-            <div className="max-w-full">
-                <div className="font-bold relative flex items-center bg-gray-100 border hover:border-gray-700 hover:bg-white">
-                <Link href="/subs/select">학습던전제작</Link>
-                </div>
-            </div>
-            <div className="max-w-full">
-            <div className="font-bold relative flex items-center bg-gray-100 border  hover:border-gray-700 hover:bg-white">
-                <Link href="/subs/archive">보관함</Link>
-                </div>
-            </div>
-            <div className="max-w-full">
-            <div className="font-bold relative flex items-center bg-gray-100 border  hover:border-gray-700 hover:bg-white">
-                <Link href="/webgl">메타스쿨오픈</Link>
-                </div>
-            </div>
-            <div className="max-w-full">
-                <div className="font-bold relative flex items-center bg-gray-100 border  hover:border-gray-700 hover:bg-white">
-                <Link href="/students">학생정보관리</Link>
-                </div>
-            </div>
-            <div className="max-w-full">
-                <div className="font-bold relative flex items-center bg-gray-100 border  hover:border-gray-700 hover:bg-white">
-                <Link href="/information">내 정보</Link>
-                </div>
-            </div>
-            <div className="max-w-full">
-                <div className="font-bold relative flex items-center bg-gray-100 border  hover:border-gray-700 hover:bg-white">
-                <Link href="/socket_test">소켓 테스트</Link>
-                </div>
-            </div>
-
-
-            <div className="flex">
-                {!loading && (
-                    authenticated ? (
-                        <button
-                            className="w-20 px-2 mr-2 text-sm text-center text-white bg-gray-400 rounded h-7"
-                            onClick={handleLogout}
-                        >
-                            로그아웃
-                        </button>
-                    ) : (<>
-                        <Link href="/login">
-                            <a className="w-20 px-2 pt-1 mr-2 text-sm text-center text-blue-500 border border-blue-500 rounded h-7">
-                                로그인
-                            </a>
-                        </Link>
-                        <Link href="/register">
-                            <a className="w-20 px-2 pt-1 text-sm text-center text-white bg-gray-400 rounded h-7">
-                                회원가입
-                            </a>
-                        </Link>
-                    </>)
-                )}
-            </div>
-        </div>
->>>>>>> 63a9535 (initial)
     )
 }
 

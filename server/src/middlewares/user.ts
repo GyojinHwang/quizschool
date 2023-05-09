@@ -7,15 +7,9 @@ export default async (req: Request, res: Response, next: NextFunction) => {
     const token = req.cookies.token;
     if (!token) return next();
 
-<<<<<<< HEAD
     const { user_id }: any = jwt.verify(token, process.env.JWT_SECRET);
 
     const user = await User.findOneBy({ user_id });
-=======
-    const { username }: any = jwt.verify(token, process.env.JWT_SECRET);
-
-    const user = await User.findOneBy({ username });
->>>>>>> 63a9535 (initial)
 
     if (!user) throw new Error("Unauthenticated");
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ExecOptionsWithStringEncoding } from "child_process";
 import { IntervalHistogram } from "perf_hooks";
 
@@ -17,19 +16,10 @@ export interface User {
   class_no: string;
   phone: string;
   marketing: boolean;
-=======
-import { IntervalHistogram } from "perf_hooks";
-
-export interface User {
-  _user: string;
-  username: string;
-  email: string;
->>>>>>> 63a9535 (initial)
   createdAt: string;
   updatedAt: string;
 }
 
-<<<<<<< HEAD
 export interface Template {
   template_no: string;
   template_name: string;
@@ -185,77 +175,4 @@ export interface Item {
   active: boolean;
   createdAt: string;
   updatedAt: string;
-=======
-export interface Sub {
-  _game: string;
-  createdAt: string;
-  updatedAt: string;
-  name: string;
-  title: string;
-  description: string;
-  imageUrn: string;
-  bannerUrn: string;
-  username: string;
-  posts: Post[];
-  postCount?: string;
-  questionnumber?: string;
-  imageUrl: string;
-  bannerUrl: string;
-}
-
-export interface Post {
-  _id: string;
-  identifier: string;
-  title: string;
-  slug: string;
-  body: string;
-  subname: string;
-  username: string;
-  createdAt: string;
-  updatedAt: string;
-  question: string;
-  answer1: string;
-  answer2: string;
-  answer3: string;
-  answer4: string;
-  answerno: string;
-  sub?: Sub;
-
-  url: string;
-  userVote?: number;
-  voteScore?: number;
-  commentCount?: number;
-}
-
-export interface Comment {
-  identifier: string;
-  body: string;
-  username: string;
-  createdAt: string;
-  updatedAt: string;
-  post?: Post;
-
-  userVote: number;
-  voteScore: number;
-}
-
-export interface Student {
-  student_id: string;
-  studentname: string;
-  createdAt: string;
-  updatedAt: string;
-  studentImage: string;
-  description: string; 
-  username: string;
-  level: number;
-  items: Item[];
-}
-
-export interface Item {
-  itemname: string;
-  itemid: string;
-  createdAt: string;
-  updatedAt: string;
-  student?: Student;
->>>>>>> 63a9535 (initial)
 }
