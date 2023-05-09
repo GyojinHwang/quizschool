@@ -1,0 +1,11 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+<<<<<<< HEAD
+temp/
+src/data-source.ts
+=======
+temp/
+>>>>>>> 63a9535 (initial)
